@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "cases_pages",
+  "info": {
+    "singularName": "cases-page",
+    "pluralName": "cases-pages",
+    "displayName": "Cases Page"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Кейсы"
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  }
+}

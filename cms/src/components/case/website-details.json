@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_case_website_details",
+  "info": {
+    "displayName": "websiteDetails",
+    "description": "Details for website-type cases"
+  },
+  "options": {},
+  "attributes": {
+    "liveUrl": {
+      "type": "string",
+      "required": true
+    },
+    "ctaLabel": {
+      "type": "string",
+      "default": "Перейти на сайт"
+    },
+    "openInNewTab": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

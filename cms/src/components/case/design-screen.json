@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_case_design_screens",
+  "info": {
+    "displayName": "designScreen",
+    "description": "A single screen in a design case"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    },
+    "alt": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer"
+    }
+  }
+}

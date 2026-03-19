@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_case_design_details",
+  "info": {
+    "displayName": "designDetails",
+    "description": "Details for design-type cases"
+  },
+  "options": {},
+  "attributes": {
+    "platform": {
+      "type": "string",
+      "required": true
+    },
+    "screensCount": {
+      "type": "integer"
+    },
+    "viewer": {
+      "type": "enumeration",
+      "enum": ["browser", "phone", "none"],
+      "default": "browser"
+    },
+    "screens": {
+      "type": "component",
+      "repeatable": true,
+      "component": "case.design-screen",
+      "required": true
+    },
+    "ctaLabel": {
+      "type": "string",
+      "default": "Смотреть кейс"
+    }
+  }
+}
