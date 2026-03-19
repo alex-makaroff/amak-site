@@ -20,7 +20,6 @@ git pull
 /root/.nvm/versions/node/v22.17.1/bin/node /opt/node/amak-site/update.js
 ```
 
-Добейся того, чтобы ты мог запустить сайт
 (обрати внимание, что использовать для запуска надо ноду /root/.nvm/versions/node/v22.17.1/bin/node)
 
 Цикл таков:
@@ -32,4 +31,10 @@ git pull
 - запустил на сервере web-server проекта
 - проверил http://amak.site с помощью playwright
 - Если что-то не так, прибиваешь процесс на порту 9011 и повторяешь цикл
+
+# ЗАдача
+
+ЗАрегистрировать сервис сайта в systemd в соответствии с документацией deploy/srv.sh.readme.md
+
+
 
