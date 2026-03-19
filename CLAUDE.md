@@ -33,7 +33,7 @@ npm start                    # Production: Strapi on PORT from .env, serves fron
 
 ### Deployment
 ```bash
-node update.js [-b branch] [-f]                                    # Auto-update (git pull, rebuild, restart)
+node update.cjs [-b branch] [-f]                                    # Auto-update (git pull, rebuild, restart)
 node deploy/srv.cjs install|delete|reinstall [-n name] [-v version] # Systemd service management
 ```
 
