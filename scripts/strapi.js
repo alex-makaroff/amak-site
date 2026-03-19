@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { readFileSync } from 'fs'
+import { readFileSync, cpSync, existsSync } from 'fs'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { execSync } from 'child_process'
@@ -31,3 +31,15 @@ execSync(`"${process.execPath}" "${strapiModule}" ${cmd}`, {
   stdio: 'inherit',
   env: process.env,
 })
+
+// After build, copy JSON files to dist (TypeScript doesn't emit them)
+if (cmd === 'build') {
+  const distSrc = resolve(cmsDir, 'dist', 'src')
+  if (existsSync(distSrc)) {
+    cpSync(resolve(cmsDir, 'src'), distSrc, {
+      recursive: true,
+      filter: (src) => src.endsWith('.json') || !src.includes('.'),
+    })
+    console.log('Copied JSON files to dist/src')
+  }
+}
