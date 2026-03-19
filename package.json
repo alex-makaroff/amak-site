@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
+  "main": "scripts/strapi.js",
   "scripts": {
     "dev": "vite",
     "dev:cms": "node scripts/strapi.js develop",
