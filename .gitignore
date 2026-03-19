@@ -16,3 +16,5 @@ attached_assets/
 /.idea/
 /.claude/settings.local.json
 /deploy/config.yml
+/.serena/.gitignore
+/.serena/project.yml
