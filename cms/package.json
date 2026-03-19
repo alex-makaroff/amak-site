@@ -6,7 +6,8 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "postinstall": "node ../scripts/patch-strapi-ts.cjs"
   },
   "dependencies": {
     "@google-cloud/storage": "^7.19.0",
@@ -25,8 +26,5 @@
   "engines": {
     "node": ">=20.x.x",
     "npm": ">=6.0.0"
-  },
-  "overrides": {
-    "typescript": "~5.6.0"
   }
 }
