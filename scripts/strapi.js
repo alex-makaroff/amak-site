@@ -25,8 +25,8 @@ try {
 
 const cmd = process.argv[2] || 'start'
 const cmsDir = resolve(root, 'cms')
-const strapiBin = resolve(cmsDir, 'node_modules', '.bin', 'strapi')
-execSync(`${strapiBin} ${cmd}`, {
+const strapiModule = resolve(cmsDir, 'node_modules', '@strapi', 'strapi', 'bin', 'strapi.js')
+execSync(`"${process.execPath}" "${strapiModule}" ${cmd}`, {
   cwd: cmsDir,
   stdio: 'inherit',
   env: process.env,
