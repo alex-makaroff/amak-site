@@ -11,6 +11,7 @@ frontend-full.png
 admin-login.png
 cms/.tmp/
 cms/build/
+*.tsbuildinfo
 .local/
 .agents/
 .replit
