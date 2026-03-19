@@ -19,7 +19,7 @@ const VON = path.resolve(path.join(CWD, '..'));
 
 // Default c onfiguration
 const DEFAULT_CONFIG = {
-  branch: 'production',
+  branch: 'main',
   email: '',
 };
 
@@ -454,20 +454,13 @@ const reinstallDependencies = () => {
 
   execCommand('rm -rf node_modules/');
   execWithNODE('npm ci');
-  logIt('Dependencies installed');
+  logIt('Root dependencies installed');
 };
 
-const buildServer = () => {
-  logIt('BUILD SERVER', true);
-  execWithNODE('npm run build:server', { silent: true });
-  logIt('Server build completed');
-};
-
-const buildClient = () => {
-  logIt('BUILD CLIENT', true);
-  const result = execWithNODE('npm run build:client');
-  logIt(result);
-  logIt('Client build completed');
+const buildProject = () => {
+  logIt('BUILD PROJECT', true);
+  execWithNODE('npm run build', { silent: true });
+  logIt('Project build completed (vite + copy frontend + strapi)');
 };
 
 const restartService = (serviceNamePM) => {
@@ -570,8 +563,7 @@ async function main () {
       updateDeployedLogFile = true;
       logTryUpdate(updateReason);
       reinstallDependencies();
-      buildServer();
-      buildClient();
+      buildProject();
       restartService(serviceNamePM);
 
       // Add completion info to build log

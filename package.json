@@ -4,9 +4,11 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "build": "vite build && bash scripts/copy-frontend.sh && cd cms && npm install --legacy-peer-deps && npx strapi build",
     "dev": "vite",
-    "start": "cd cms && NODE_ENV=production PORT=5000 npx strapi start"
+    "dev:cms": "node scripts/strapi.js develop",
+    "build": "vite build && node scripts/copy-frontend.js && cd cms && npm install --legacy-peer-deps && node ../scripts/strapi.js build",
+    "start": "node scripts/strapi.js start",
+    "setup:cms": "cd cms && npm install --legacy-peer-deps"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
